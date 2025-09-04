@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<%- include('./shared/header.ejs')%>
+
+    <body>
+        <%- include('./shared/nav.ejs')%>
+            <div class="blog-form col-md-6">
+                <form action="/blogs" method="POST" class="create-blog p-4 rounded shadow-sm bg-light">
+                    <!-- Name -->
+                     <input type="text" class="form-control" id="writer" name="writer" placeholder="Enter blog name" hidden>
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter blog name"
+                             />
+                    </div>
+
+                    <!-- Flash -->
+                    <div class="mb-3">
+                        <label for="flash" class="form-label fw-bold">Description</label>
+                        <input type="text" class="form-control" id="description" name="description"
+                            placeholder="Enter flash (emoji or keyword)" />
+                    </div>
+
+                    <!-- Snippet -->
+                    <div class="mb-3">
+                        <label for="snippet" class="form-label fw-bold">Detail</label>
+                        <textarea class="form-control" id="detail" name="detail" rows="3"
+                            placeholder="Write a detail"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary w-100">Create Blog</button>
+                </form>
+            </div>
+    </body>
+
+</html>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+     document.getElementById("writer").value = localStorage.getItem("user");
+});
+
+</script>

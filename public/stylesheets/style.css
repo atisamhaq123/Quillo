@@ -1,0 +1,48 @@
+body {
+  /* padding: 50px; */
+  padding: 0;
+  margin: 0;
+  font: 14px;
+  font-family: "Trirong", serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: antiquewhite;
+  padding: 20px;
+}
+/* .name {
+  background-color: red !important;
+} */
+
+.blog-form {
+  margin: 40px auto;
+  text-align: center;
+}
+
+nav>.container {
+  max-width: 100% !important;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
