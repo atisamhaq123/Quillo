@@ -26,7 +26,6 @@ const blogDetails = function(req, res, next) {
   });
   
   Blog.findById(req.params.id).then((blog)=>{
-    console.log(admin)
     res.render('detail', { title: 'Blog Detail Page', blog: blog, admin: admin });
   }).catch ((error)=>{
     res.render('404' , { title: '404 page' })

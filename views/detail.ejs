@@ -48,7 +48,6 @@
         fetch(endPoint, {method: "DELETE"})
         .then((res) => res.json())
         .then((data) => {
-            console.log("Deleted:", data);
             window.location.href = data.result; // redirect to blogs list
         })
         .catch((error)=>{
