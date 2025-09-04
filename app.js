@@ -1,3 +1,4 @@
+require("dotenv").config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -12,7 +13,7 @@ var authRouter = require('./routes/authRoutes');
 
 var app = express();
 // db uri
-const dbUri= "mongodb+srv://atisam:atisam@atisam.5ojxozz.mongodb.net/myblogs?retryWrites=true&w=majority";
+const dbUri= process.env.dbUri;
 mongoose.connect(dbUri).then(() => console.log('Connected!'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

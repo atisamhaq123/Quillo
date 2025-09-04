@@ -20,18 +20,19 @@ const blogDetails = function(req, res, next) {
   const userId = req.cookies.id;
   let admin = false;
   User.findById(userId).then((user)=>{
-    if (user.role=="admin"){
-    admin = true;
-  }
-  });
-  
-  Blog.findById(req.params.id).then((blog)=>{
-    res.render('detail', { title: 'Blog Detail Page', blog: blog, admin: admin });
-  }).catch ((error)=>{
-    res.render('404' , { title: '404 page' })
-    console.log(error)
+    if (user.role==="admin"){
+      admin = true;
+    }
+    Blog.findById(req.params.id).then((blog)=>{
+      res.render('detail', { title: 'Blog Detail Page', blog: blog, admin: admin });
+    }).catch ((error)=>{
+      res.render('404' , { title: '404 page' })
+      console.log(error)
+    });
   });
 };
+  
+
 
 //add new blog
 const blogPost = function(req, res, next) {
