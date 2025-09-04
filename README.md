@@ -59,8 +59,14 @@ It supports user roles, authentication, and blog management with a clean and min
    cd bloggingApp
 2. npm install
 3. npm start
-4. Add .env file:
-   MONGO_URI=your-mongodb-connection-string  #connection string
-   JWT_SECRET  #your-secret-key  #secret
-   PORT=3000 #port
+4. 
+### 🔑 Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+MONGO_URI=your-mongodb-connection-string   # connection string
+JWT_SECRET=your-secret-key                 # secret key for JWT
+PORT=3000                                  # port number
+
 
