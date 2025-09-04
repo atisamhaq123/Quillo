@@ -59,7 +59,7 @@ It supports user roles, authentication, and blog management with a clean and min
    cd bloggingApp
 2. npm install
 3. npm start
-4. 
+
 ### 🔑 Environment Variables
 
 Create a `.env` file in the root:
