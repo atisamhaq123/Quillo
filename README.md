@@ -37,15 +37,17 @@ It supports user roles, authentication, and blog management with a clean and min
 ---
 
 ## 📂 Project Structure
-├── controllers/ # Route logic (blogController, authController)
-├── models/ # Mongoose schemas (User, Blog)
-├── routes/ # Express route definitions
-├── views/ # EJS templates (minimalistic design)
-├── middleware/ # Auth & role-based middleware
-├── public/ # Static assets (CSS, JS, images)
-├── utils/ # Helper utilities (token generator, formatters, etc.)
-├── app.js # Main app entry
-└── README.md
+
+├── controllers/   # Route logic (blogController, authController)  
+├── models/        # Mongoose schemas (User, Blog)  
+├── routes/        # Express route definitions  
+├── views/         # EJS templates (minimalistic design)  
+├── middleware/    # Auth & role-based middleware  
+├── public/        # Static assets (CSS, JS, images)  
+├── utils/         # Helper utilities (token generator, formatters, etc.)  
+├── app.js         # Main app entry  
+└── README.md  
+
 
 ---
 
