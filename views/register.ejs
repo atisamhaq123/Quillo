@@ -1,35 +1,45 @@
 <%- include("./shared/header.ejs") %>
+<link rel='stylesheet' href='/stylesheets/register.css' />
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow-lg border-0 rounded-3">
-        <div class="card-body p-4">
-          <h3 class="text-center mb-4 text-primary fw-bold">Create Account</h3>
-          <form id="registerForm">
-            <div class="mb-3">
-              <label class="form-label">Username</label>
-              <input type="text" id="username" name="username" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" id="password" name="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Register</button>
-          </form>
-          <div id="errorMsg" class="text-danger text-center mt-3 d-none"></div>
-          <p class="text-center mt-4 mb-0">
-            Already have an account? <a href="/login">Login</a>
-          </p>
-        </div>
+<div class="container-fluid">
+  <div class="row full-height">
+    <!-- Left Side: Intro -->
+    <div class="col-md-6 intro-panel">
+      <img src="images/logo.png" alt="Quillo Logo" class="mb-4" style="max-width: 150px;">
+      <h1>Join <span class="text-info">Quillo</span></h1>
+      <p class="typing-text">
+        Create your account and start sharing your blogs, ideas, and stories with the world.
+      </p>
+    </div>
+
+    <!-- Right Side: Register Form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="register-card w-75">
+        <h3 class="text-center text-primary mb-4">Create Account</h3>
+        <form id="registerForm">
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+        <div id="errorMsg" class="text-danger text-center mt-3 d-none"></div>
+        <p class="text-center mt-4 mb-0">
+          Already have an account? <a href="/login">Login</a>
+        </p>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
   document.querySelector("#registerForm").addEventListener("submit", async (e) => {

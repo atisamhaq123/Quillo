@@ -1,0 +1,71 @@
+  /* Full height row */
+  .full-height {
+    min-height: 100vh;
+  }
+
+  /* Futuristic left panel */
+  .intro-panel {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .intro-panel h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .typing-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-right: 3px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 85% }
+  }
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+  }
+
+  /* Futuristic login card */
+  .login-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .login-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .login-card .form-control {
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  .login-card button {
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 12px;
+  }

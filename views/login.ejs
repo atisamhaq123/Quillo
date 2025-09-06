@@ -1,32 +1,41 @@
 <%- include("./shared/header.ejs") %>
-<%- include("./shared/nav.ejs") %>
+<link rel='stylesheet' href='/stylesheets/login.css' />
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow-lg border-0 rounded-3">
-        <div class="card-body p-4">
-          <h3 class="text-center mb-4 text-primary fw-bold">Login</h3>
-          <form id="loginForm">
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" id="password" name="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-success w-100">Login</button>
-          </form>
-          <div id="errorMsg" class="text-danger text-center mt-3 d-none"></div>
-          <p class="text-center mt-4 mb-0">
-            Don’t have an account? <a href="/register">Register</a>
-          </p>
-        </div>
+<div class="container-fluid">
+  <div class="row full-height">
+    <!-- Left Side: Intro -->
+    <div class="col-md-6 intro-panel">
+      <img src="images/logo.png" alt="Quillo Logo" class="mb-4" style="max-width: 150px;">
+      <h1>Welcome to <span class="text-info">Quillo</span></h1>
+      <p class="typing-text">
+        A blogging web app where you can share your blogs and tell your stories to the world.
+      </p>
+    </div>
+
+    <!-- Right Side: Login Form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="login-card w-75">
+        <h3 class="text-center text-primary mb-4">Login</h3>
+        <form id="loginForm">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-gradient w-100 btn-success">Login</button>
+        </form>
+        <div id="errorMsg" class="text-danger text-center mt-3 d-none"></div>
+        <p class="text-center mt-4 mb-0">
+          Don’t have an account? <a href="/register">Register</a>
+        </p>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
   document.querySelector("#loginForm").addEventListener("submit", async (e) => {
