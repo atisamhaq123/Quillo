@@ -1,4 +1,4 @@
-# BloggingApp 📝
+# Quillio 📝
 
 A simple blogging application built with **Node.js, Express, MongoDB (remote)**, and the **MVC pattern**.  
 It supports user roles, authentication, and blog management with a clean and minimalistic design.
@@ -23,7 +23,7 @@ It supports user roles, authentication, and blog management with a clean and min
 
 - **Architecture**
   - Follows the **MVC pattern** (Models, Views, Controllers)
-  - Minimalistic design with server-side rendered views (EJS / Pug / Handlebars)
+  - Minimalistic design with server-side rendered views (EJS)
 
 ---
 
@@ -44,7 +44,7 @@ It supports user roles, authentication, and blog management with a clean and min
 ├── views/         # EJS templates (minimalistic design)  
 ├── middleware/    # Auth & role-based middleware  
 ├── public/        # Static assets (CSS, JS, images)  
-├── utils/         # Helper utilities (token generator, formatters, etc.)  
+├── utils/         # Helper utilities (jwt token generator)  
 ├── app.js         # Main app entry  
 └── README.md  
 
@@ -59,8 +59,14 @@ It supports user roles, authentication, and blog management with a clean and min
    cd bloggingApp
 2. npm install
 3. npm start
-4. Add .env file:
-   MONGO_URI=your-mongodb-connection-string
-   JWT_SECRET=your-secret-key
-   PORT=3000
+
+### 🔑 Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+MONGO_URI=your-mongodb-connection-string   # connection string
+JWT_SECRET=your-secret-key                 # secret key for JWT
+PORT=3000                                  # port number
+
 
