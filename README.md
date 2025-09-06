@@ -1,4 +1,4 @@
-# BloggingApp 📝
+# Quillio 📝
 
 A simple blogging application built with **Node.js, Express, MongoDB (remote)**, and the **MVC pattern**.  
 It supports user roles, authentication, and blog management with a clean and minimalistic design.
