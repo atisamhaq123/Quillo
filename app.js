@@ -32,8 +32,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/auth', authRouter);
 
 // serve login/register
-app.get("/login", checkLoginMiddleware, (req, res) => res.render("login", { title: 'Login'}));
-app.get("/register", checkLoginMiddleware, (req, res) => res.render("register", { title: 'Register'}));
+app.get("/login", checkLoginMiddleware, (req, res) => {
+  res.set({
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma' : 'no-cache',
+      'Expires' : '0',
+  })
+  res.render("login", { title: "Login" });
+});
+
+app.get("/register", checkLoginMiddleware, (req, res) => {
+  res.set({
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+  });
+  res.render("register", { title: "Register" });
+});
 
 // blogs
 app.use('/blogs', blogRouter);
